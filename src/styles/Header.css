@@ -1,0 +1,51 @@
+.app__header {
+  background-color: #fbf6f0;
+  border-bottom: 1px solid #e4e2e2;
+  height: 10vh;
+  display: flex;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.app__headerContent {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.app__headerImg {
+  object-fit: contain;
+}
+
+.app__headerContent input {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 0.5rem;
+  width: 35%;
+}
+
+.app__headerContent input:focus {
+  outline: none;
+}
+
+.app__headerButtons button:hover {
+  background-color: #ffa45b;
+}
+
+@media (max-width: 721px) {
+  .app__header {
+    min-width: 100vw;
+  }
+
+  .app__headerContent input {
+    display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  #button {
+    font-size: 0.75rem;
+  }
+}
