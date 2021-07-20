@@ -2,7 +2,7 @@
   margin: 2rem 6rem;
   width: 50vw;
   height: auto;
-  border: 2px solid rgba(0, 0, 0, 0.281);
+  border: 1px solid #00000048;
   border-radius: 5px;
   display: block;
 }

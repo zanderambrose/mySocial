@@ -28,10 +28,20 @@
 
 .app__headerContent input:focus {
   outline: none;
+  box-shadow: none;
 }
 
 .app__headerButtons button:hover {
   background-color: #ffa45b;
+}
+
+.app__ModalBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__ModalBtn {
+  margin-top: 10px;
 }
 
 @media (max-width: 721px) {
