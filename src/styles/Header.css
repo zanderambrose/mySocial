@@ -42,6 +42,13 @@
 
 .app__ModalBtn {
   margin-top: 10px;
+  background-color: #ffa45b;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.app__ModalBtn:hover {
+  transform: scale(1.025);
 }
 
 @media (max-width: 721px) {

@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal'
 import {auth} from '../firebase'
 
 
-const Header = () => {
+const Header = ({getUser}) => {
     const btnStyle = {
         border: "1px solid #e4e2e2",
         borderRadius: '10px',
@@ -71,6 +71,11 @@ const Header = () => {
         setUser(null)
     }
 
+    // GETUSER FUNCTION PASSING STATE UP TO APP.JS
+    useEffect(()=>{
+        getUser(user)
+    }, [user])
+
     return (
     <header className="app__header">
         <div className="app__headerContent">
@@ -110,6 +115,7 @@ const Header = () => {
                         </Button>
                     </div>
                 )}
+
 
             {/* SIGN UP MODAL DISPLAY */}
                 <Modal 
@@ -155,17 +161,17 @@ const Header = () => {
                                 name="password" 
                                 id="password"/>
                             <Button
-                                variant='secondary'
+                                variant='dark'
                                 className="app__ModalBtn" 
                                 onClick={handleClose}>
                                 Close
                             </Button>
-                            <Button
+                            <button
                                 type='submit'
                                 className="app__ModalBtn" 
                                 onClick={onSignUpSubmit}>
                                     Submit
-                            </Button>
+                            </button>
                         </form>
                     </Modal.Body>
                 </Modal>
@@ -208,17 +214,17 @@ const Header = () => {
                                 name="password" 
                                 id="password"/>
                             <Button
-                                variant='secondary'
+                                variant='dark'
                                 className="app__ModalBtn" 
                                 onClick={handleLoginClose}>
                                 Close
                             </Button>
-                            <Button
+                            <button
                                 type='submit'
                                 className="app__ModalBtn" 
                                 onClick={onLoginSubmit}>
                                     Login
-                            </Button>
+                            </button>
                         </form>
                     </Modal.Body>
                 </Modal>
