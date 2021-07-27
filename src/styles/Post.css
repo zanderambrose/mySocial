@@ -22,6 +22,7 @@
   margin: 1rem 0 0;
   object-fit: contain;
   width: 100%;
+  border-top: 1px solid lightgrey;
 }
 
 .app__PostIcons {
@@ -32,11 +33,35 @@
   margin-bottom: 1.5rem;
 }
 
+.like:hover {
+  transform: scale(1.25);
+}
+.comment:hover {
+  transform: scale(1.25);
+}
+
 .leftIndent {
   max-width: 90vw;
   position: relative;
   left: 1.5rem;
   top: 0.5rem;
+}
+
+.app__PostForm {
+  display: flex;
+}
+
+.app__PostForm input {
+  flex: 1;
+  border: none;
+  padding: 0.5rem;
+  border-top: 1px solid lightgrey;
+}
+
+.app__PostForm button {
+  flex: 0;
+  color: #ffa45b;
+  background-color: transparent;
 }
 
 @media (max-width: 721px) {

@@ -1,0 +1,9 @@
+.app__MakePost {
+  width: 50vw;
+  margin: 1rem auto;
+}
+
+.app__MakePost h1 {
+  text-align: center;
+  text-decoration: underline;
+}
