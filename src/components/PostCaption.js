@@ -33,7 +33,9 @@ const PostCaption = ({user,username,description, postId}) => {
     {if(user && user.displayName === username){
         return (
             <div className="app__PostDescriptionEdit">
-                <p><b>{username}</b> - {description}</p>
+                <p className="descriptionDiv">
+                    <b>{username}</b> - {description}
+                </p>
                 <div className="UD">
                     <HiDotsHorizontal
                         onClick={handleShow}
