@@ -33,6 +33,37 @@
   margin-bottom: 1.5rem;
 }
 
+.app__PostDescriptionEdit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editDescription {
+  padding: 0.25rem;
+  position: relative;
+  bottom: 5px;
+  right: 10px;
+}
+
+.editDescription:hover {
+  background-color: lightgrey;
+  border-radius: 50%;
+  transform: scale(1.25);
+}
+
+.deletePost {
+  padding: 0.25rem;
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+}
+
+.deletePost:hover {
+  background-color: rgba(255, 0, 0, 0.568);
+  border-radius: 50%;
+  transform: scale(1.25);
+}
+
 .like:hover {
   transform: scale(1.25);
 }
@@ -41,10 +72,8 @@
 }
 
 .leftIndent {
-  max-width: 90vw;
-  position: relative;
-  left: 1.5rem;
-  top: 0.5rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
 }
 
 .app__PostForm {

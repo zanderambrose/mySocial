@@ -2,9 +2,11 @@ import React, {useState, useEffect, useRef} from 'react'
 import '../styles/Post.css'
 import firebase from 'firebase'
 import {db} from '../firebase'
-// import Avatar from '@material-ui/core/Avatar'
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+import {FaRegHeart} from 'react-icons/fa'
+import {BiComment} from 'react-icons/bi'
+import PostCaption from './PostCaption'
+
+
 
 const Post = ({username, description, postImg, postId, user}) => {
 
@@ -17,7 +19,9 @@ const Post = ({username, description, postImg, postId, user}) => {
     // REF AND FUNCTION FOR COMMENT ICON AND COMMENT TEXT INPUT
     const commentRef = useRef()
     const commentFocus = () => {
-        commentRef.current.focus();
+        if(user){
+            commentRef.current.focus();
+        }
     }
 
     // STATE AND FUNCTION FOR COMMENTS ON EACH POST
@@ -63,9 +67,6 @@ const Post = ({username, description, postImg, postId, user}) => {
     return (
         <div className="app__Post">
             <header className="app__PostHeader leftIndent">
-                {/* <Avatar 
-                    src={avatar} 
-                    alt="avatar"/> */}
                 <h4 className="app__username"><b>{username}</b></h4>
             </header>
 
@@ -74,11 +75,13 @@ const Post = ({username, description, postImg, postId, user}) => {
             </main>
 
             <section className="app__PostIcons leftIndent">
-                <FavoriteBorderIcon
+                <FaRegHeart
+                    size="1.25rem"
                     className='like' 
                     style={{color: bgColor}} 
                     onClick={handleLikeClick}/>
-                <ChatBubbleOutlineIcon
+                <BiComment
+                    size="1.25rem"
                     onClick={commentFocus} 
                     className='comment'
                     style={{
@@ -88,18 +91,18 @@ const Post = ({username, description, postImg, postId, user}) => {
             </section>
 
             <div className="app__PostCaption leftIndent">
-                <p><b>{username}</b> - {description}</p>
+                <PostCaption username={username} user={user} description={description} postId={postId}/>
             </div>
 
             <div className="app__PostComments leftIndent">
                 {comments.map((item, idx)=>{
-                    if(comments.length > 0){
-                     return <p key={idx}>
+                        return(
+                        <div key={idx}>
+                            <p>
                                 <b>{item.username}</b> - {item.text}
                             </p>
-                    } else {
-                        return
-                    }
+                        </div>
+                        )
                 })}
             </div>
             

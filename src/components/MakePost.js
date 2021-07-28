@@ -52,9 +52,6 @@ const MakePost = ({username}) => {
                             postImg: url,
                             username: username
                         }); 
-                        // setDescription('');
-                        // setPercent(0)
-                        // setImg(null);
                     });
                 setDescription('');
                 setPercent(0);

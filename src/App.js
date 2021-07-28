@@ -11,7 +11,6 @@ function App() {
   const [posts, setPosts] = useState([])
   const [user, setUser] = useState(null)
   const [isUser, setIsUser] = useState(false)
-  // const [username, setUsername] = useState('')
 
   // configure Firebase DB to display data
   useEffect(()=>{
@@ -32,12 +31,6 @@ function App() {
         setIsUser(false)
         setUser(null)
       };
-
-      // if(user){
-      //   setUser(user)
-      // } else {
-      //   setUser(null)
-      // }
   }
 
 
@@ -70,23 +63,3 @@ function App() {
 export default App;
 
 
-
-
- // const [posts, setPosts] = useState([
-  //   {
-  //     username: 'zander',
-  //     avatar: '../../img/zanderImg.png',
-  //     postImg: '../../img/iii-points.png',
-  //     description: 'this is my post',
-  //     comments: [
-  //       {
-  //         username: 'ron',
-  //         comment: 'this is my comment'
-  //       },
-  //       {
-  //         username: 'ron',
-  //         comment: 'this is my comment'
-  //       }
-  //     ]
-  //   }
-  // ])
