@@ -74,11 +74,6 @@ const MakePost = ({username}) => {
                         placeholder="Enter your description..."
                         value={description}
                         onChange={handleDescriptionChange}/>
-                    {/* <input 
-                        value={description}
-                        type="text" 
-                        placeholder="Enter your description..." 
-                        onChange={handleDescriptionChange}/> */}
                 </Form.Group>
                 <input 
                     type="file"

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import LoginOrSignUp from './components/LoginOrSignUp';
 import MakePost from './components/MakePost';
@@ -12,7 +13,7 @@ function App() {
   const [user, setUser] = useState(null)
   const [isUser, setIsUser] = useState(false)
 
-  // configure Firebase DB to display data
+  // Firebase DB to display  POSTS data
   useEffect(()=>{
     db.collection('posts').orderBy('timestamp','desc').onSnapshot(snapshot =>{
       setPosts(snapshot.docs.map(doc => ({
@@ -32,7 +33,6 @@ function App() {
         setUser(null)
       };
   }
-
 
   return (
       <div className="App">
@@ -54,6 +54,7 @@ function App() {
               />
             )
           })}
+          <Footer/>
         </main>
       </div>
   

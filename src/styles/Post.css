@@ -1,32 +1,19 @@
 .app__Post {
-  margin: 2rem 6rem;
+  margin: 2rem auto;
   width: 50vw;
-  height: auto;
   border: 1px solid #00000048;
   border-radius: 5px;
-  display: block;
-}
-
-.app__PostHeader {
-  display: flex;
-  align-items: center;
 }
 
 .app__username {
   position: relative;
-  top: 5px;
   left: 10px;
 }
 
 .app__PostImg img {
-  margin: 1rem 0 0;
   object-fit: contain;
   width: 100%;
   border-top: 1px solid lightgrey;
-}
-
-.app__PostIcons {
-  margin-bottom: 0.25rem;
 }
 
 .app__PostComments {
@@ -42,10 +29,6 @@
   flex: 1;
 }
 
-.UD {
-  flex: 0;
-}
-
 .editDescription {
   padding: 0.25rem;
   position: relative;
@@ -54,7 +37,7 @@
 }
 
 .editDescription:hover {
-  background-color: lightgrey;
+  background-color: lightblue;
   border-radius: 50%;
   transform: scale(1.25);
 }
@@ -97,8 +80,13 @@
 
 .app__PostForm button {
   flex: 0;
-  color: #ffa45b;
-  background-color: transparent;
+  color: white;
+  background-color: #ffa45b;
+  border-radius: 5px;
+}
+
+.app__PostForm button:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 721px) {
@@ -106,9 +94,5 @@
     width: 100vw;
     margin: 2rem auto;
     min-width: 100vw;
-  }
-
-  .UD {
-    display: flex;
   }
 }

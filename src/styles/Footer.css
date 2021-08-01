@@ -1,0 +1,35 @@
+.copyright {
+  background-color: black;
+  border-top: 1px solid black;
+  text-align: center;
+  color: #ffffffa4;
+  font-size: smaller;
+  font-family: serif;
+  margin-top: 5rem;
+}
+
+.copyrightColumn {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.copyrightRow {
+  margin: auto;
+  display: flex;
+}
+
+.copyrightRow p {
+  padding: 0.5rem 1rem;
+}
+
+.copyrightRow p:first-child,
+.copyrightRow p:first-child + p {
+  border-right: 1px solid#ffffffa4;
+}
+.copyrightRow p:first-child:hover,
+.copyrightRow p:first-child + p:hover {
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
